@@ -1,0 +1,140 @@
+/*
+Theme Name: DentalCare Premium Theme
+Theme URI: https://dentalcare.com/theme
+Author: Senior UI/UX Designer & Full Stack Developer
+Author URI: https://dentalcare.com
+Description: Custom, high-end, speed-optimized theme for premium international dental clinics. Bypasses bulky page builders with semantic HTML5, CSS3, and native Gutenberg block patterns. Built with security, premium aesthetics, and international CRM integrations.
+Version: 1.0.0
+License: GNU GPLv2 or later
+Text Domain: dentalcare
+Tags: clinic, dentist, healthcare, luxury, responsive, clean, seo-friendly
+*/
+
+/* --- THEME CSS VARIABLES & CSS RESET --- */
+:root {
+  --primary-color: #0F4C81;    /* Luxury Classic Blue */
+  --secondary-color: #1DB6C4;  /* Modern Bright Teal */
+  --neutral-dark: #1A1A1A;     /* Soft Charcoal Black */
+  --neutral-light: #F7FAFC;    /* Eye-Safe Cool Light Gray */
+  --white: #FFFFFF;
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-premium: 0 10px 30px rgba(15, 76, 129, 0.08);
+  --shadow-hover: 0 20px 40px rgba(15, 76, 129, 0.15);
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Poppins', sans-serif;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--neutral-dark);
+  background-color: var(--white);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-top: 0;
+  line-height: 1.25;
+}
+
+/* Base Styles */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Premium Buttons */
+.btn-dc {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-dc-primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.btn-dc-primary:hover {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-dc-secondary {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+.btn-dc-secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-dc-outline {
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.btn-dc-outline:hover {
+  background-color: var(--white);
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
